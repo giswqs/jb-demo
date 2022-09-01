@@ -282,7 +282,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/giswqs/jb-demo/edit/master/book/gee.ipynb"
+        <a href="https://github.com/giswqs/jb-demo/edit/master/book/gee.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -314,6 +314,23 @@ title="Edit this page"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/book/gee.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
 title="Download source file"
 >
   
@@ -321,7 +338,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -600,7 +617,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#id2">
      Create timelapse animations
     </a>
    </li>
@@ -905,7 +922,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#id2">
      Create timelapse animations
     </a>
    </li>
@@ -971,103 +988,104 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="google-earth-engine">
-<h1><a class="toc-backref" href="#id2">Google Earth Engine</a><a class="headerlink" href="#google-earth-engine" title="Permalink to this headline">#</a></h1>
+<h1><a class="toc-backref" href="#id3">Google Earth Engine</a><a class="headerlink" href="#google-earth-engine" title="Permalink to this headline">#</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#google-earth-engine" id="id2">Google Earth Engine</a></p>
+<li><p><a class="reference internal" href="#google-earth-engine" id="id3">Google Earth Engine</a></p>
 <ul>
-<li><p><a class="reference internal" href="#introduction" id="id3">Introduction</a></p>
+<li><p><a class="reference internal" href="#introduction" id="id4">Introduction</a></p>
 <ul>
-<li><p><a class="reference internal" href="#description" id="id4">Description</a></p></li>
-<li><p><a class="reference internal" href="#useful-links" id="id5">Useful links</a></p></li>
-<li><p><a class="reference internal" href="#prerequisite" id="id6">Prerequisite</a></p></li>
-<li><p><a class="reference internal" href="#set-up-a-conda-environment" id="id7">Set up a conda environment</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id5">Description</a></p></li>
+<li><p><a class="reference internal" href="#useful-links" id="id6">Useful links</a></p></li>
+<li><p><a class="reference internal" href="#prerequisite" id="id7">Prerequisite</a></p></li>
+<li><p><a class="reference internal" href="#set-up-a-conda-environment" id="id8">Set up a conda environment</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#geemap-basics" id="id8">geemap basics</a></p>
+<li><p><a class="reference internal" href="#geemap-basics" id="id9">geemap basics</a></p>
 <ul>
-<li><p><a class="reference internal" href="#import-libraries" id="id9">Import libraries</a></p></li>
-<li><p><a class="reference internal" href="#create-an-interactive-map" id="id10">Create an interactive map</a></p></li>
-<li><p><a class="reference internal" href="#customize-the-default-map" id="id11">Customize the default map</a></p></li>
-<li><p><a class="reference internal" href="#add-basemaps" id="id12">Add basemaps</a></p></li>
-<li><p><a class="reference internal" href="#change-basemaps-without-coding" id="id13">Change basemaps without coding</a></p></li>
-<li><p><a class="reference internal" href="#add-wms-and-xyz-tile-layers" id="id14">Add WMS and XYZ tile layers</a></p></li>
-<li><p><a class="reference internal" href="#use-drawing-tools" id="id15">Use drawing tools</a></p></li>
-<li><p><a class="reference internal" href="#convert-gee-javascript-to-python" id="id16">Convert GEE JavaScript to Python</a></p></li>
+<li><p><a class="reference internal" href="#import-libraries" id="id10">Import libraries</a></p></li>
+<li><p><a class="reference internal" href="#create-an-interactive-map" id="id11">Create an interactive map</a></p></li>
+<li><p><a class="reference internal" href="#customize-the-default-map" id="id12">Customize the default map</a></p></li>
+<li><p><a class="reference internal" href="#add-basemaps" id="id13">Add basemaps</a></p></li>
+<li><p><a class="reference internal" href="#change-basemaps-without-coding" id="id14">Change basemaps without coding</a></p></li>
+<li><p><a class="reference internal" href="#add-wms-and-xyz-tile-layers" id="id15">Add WMS and XYZ tile layers</a></p></li>
+<li><p><a class="reference internal" href="#use-drawing-tools" id="id16">Use drawing tools</a></p></li>
+<li><p><a class="reference internal" href="#convert-gee-javascript-to-python" id="id17">Convert GEE JavaScript to Python</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#earth-engine-datasets" id="id17">Earth Engine datasets</a></p>
+<li><p><a class="reference internal" href="#earth-engine-datasets" id="id18">Earth Engine datasets</a></p>
 <ul>
-<li><p><a class="reference internal" href="#load-earth-engine-datasets" id="id18">Load Earth Engine datasets</a></p></li>
-<li><p><a class="reference internal" href="#search-the-earth-engine-data-catalog" id="id19">Search the Earth Engine Data Catalog</a></p></li>
-<li><p><a class="reference internal" href="#use-the-datasets-module" id="id20">Use the datasets module</a></p></li>
-<li><p><a class="reference internal" href="#use-the-inspector-tool" id="id21">Use the Inspector tool</a></p></li>
+<li><p><a class="reference internal" href="#load-earth-engine-datasets" id="id19">Load Earth Engine datasets</a></p></li>
+<li><p><a class="reference internal" href="#search-the-earth-engine-data-catalog" id="id20">Search the Earth Engine Data Catalog</a></p></li>
+<li><p><a class="reference internal" href="#use-the-datasets-module" id="id21">Use the datasets module</a></p></li>
+<li><p><a class="reference internal" href="#use-the-inspector-tool" id="id22">Use the Inspector tool</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#data-visualization" id="id22">Data visualization</a></p>
+<li><p><a class="reference internal" href="#data-visualization" id="id23">Data visualization</a></p>
 <ul>
-<li><p><a class="reference internal" href="#use-the-plotting-tool" id="id23">Use the Plotting tool</a></p></li>
-<li><p><a class="reference internal" href="#change-layer-opacity" id="id24">Change layer opacity</a></p></li>
-<li><p><a class="reference internal" href="#visualize-raster-data" id="id25">Visualize raster data</a></p></li>
-<li><p><a class="reference internal" href="#visualize-vector-data" id="id26">Visualize vector data</a></p></li>
-<li><p><a class="reference internal" href="#add-a-legend" id="id27">Add a legend</a></p></li>
-<li><p><a class="reference internal" href="#add-a-colorbar" id="id28">Add a colorbar</a></p></li>
-<li><p><a class="reference internal" href="#create-a-split-panel-map" id="id29">Create a split-panel map</a></p></li>
-<li><p><a class="reference internal" href="#create-linked-maps" id="id30">Create linked maps</a></p></li>
-<li><p><a class="reference internal" href="#create-timelapse-animations" id="id31">Create timelapse animations</a></p></li>
-<li><p><a class="reference internal" href="#create-time-series-composites" id="id32">Create time-series composites</a></p></li>
+<li><p><a class="reference internal" href="#use-the-plotting-tool" id="id24">Use the Plotting tool</a></p></li>
+<li><p><a class="reference internal" href="#change-layer-opacity" id="id25">Change layer opacity</a></p></li>
+<li><p><a class="reference internal" href="#visualize-raster-data" id="id26">Visualize raster data</a></p></li>
+<li><p><a class="reference internal" href="#visualize-vector-data" id="id27">Visualize vector data</a></p></li>
+<li><p><a class="reference internal" href="#add-a-legend" id="id28">Add a legend</a></p></li>
+<li><p><a class="reference internal" href="#add-a-colorbar" id="id29">Add a colorbar</a></p></li>
+<li><p><a class="reference internal" href="#create-a-split-panel-map" id="id30">Create a split-panel map</a></p></li>
+<li><p><a class="reference internal" href="#create-linked-maps" id="id31">Create linked maps</a></p></li>
+<li><p><a class="reference internal" href="#create-timelapse-animations" id="id32">Create timelapse animations</a></p></li>
+<li><p><a class="reference internal" href="#create-time-series-composites" id="id33">Create time-series composites</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#data-analysis" id="id33">Data analysis</a></p>
+<li><p><a class="reference internal" href="#data-analysis" id="id34">Data analysis</a></p>
 <ul>
-<li><p><a class="reference internal" href="#descriptive-statistics" id="id34">Descriptive statistics</a></p></li>
-<li><p><a class="reference internal" href="#zonal-statistics" id="id35">Zonal statistics</a></p></li>
-<li><p><a class="reference internal" href="#zonal-statistics-by-group" id="id36">Zonal statistics by group</a></p></li>
-<li><p><a class="reference internal" href="#unsupervised-classification" id="id37">Unsupervised classification</a></p></li>
-<li><p><a class="reference internal" href="#supervised-classification" id="id38">Supervised classification</a></p></li>
-<li><p><a class="reference internal" href="#training-sample-creation" id="id39">Training sample creation</a></p></li>
-<li><p><a class="reference internal" href="#whiteboxtools" id="id40">WhiteboxTools</a></p></li>
+<li><p><a class="reference internal" href="#descriptive-statistics" id="id35">Descriptive statistics</a></p></li>
+<li><p><a class="reference internal" href="#zonal-statistics" id="id36">Zonal statistics</a></p></li>
+<li><p><a class="reference internal" href="#zonal-statistics-by-group" id="id37">Zonal statistics by group</a></p></li>
+<li><p><a class="reference internal" href="#unsupervised-classification" id="id38">Unsupervised classification</a></p></li>
+<li><p><a class="reference internal" href="#supervised-classification" id="id39">Supervised classification</a></p></li>
+<li><p><a class="reference internal" href="#training-sample-creation" id="id40">Training sample creation</a></p></li>
+<li><p><a class="reference internal" href="#whiteboxtools" id="id41">WhiteboxTools</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#map-making" id="id41">Map making</a></p>
+<li><p><a class="reference internal" href="#map-making" id="id42">Map making</a></p>
 <ul>
-<li><p><a class="reference internal" href="#plot-a-single-band-image" id="id42">Plot a single band image</a></p></li>
-<li><p><a class="reference internal" href="#plot-an-rgb-image" id="id43">Plot an RGB image</a></p></li>
-<li><p><a class="reference internal" href="#add-map-elements" id="id44">Add map elements</a></p></li>
-<li><p><a class="reference internal" href="#plot-multiple-layers" id="id45">Plot multiple layers</a></p></li>
-<li><p><a class="reference internal" href="#use-custom-projections" id="id46">Use custom projections</a></p></li>
-<li><p><a class="reference internal" href="#id1" id="id47">Create timelapse animations</a></p></li>
+<li><p><a class="reference internal" href="#plot-a-single-band-image" id="id43">Plot a single band image</a></p></li>
+<li><p><a class="reference internal" href="#plot-an-rgb-image" id="id44">Plot an RGB image</a></p></li>
+<li><p><a class="reference internal" href="#add-map-elements" id="id45">Add map elements</a></p></li>
+<li><p><a class="reference internal" href="#plot-multiple-layers" id="id46">Plot multiple layers</a></p></li>
+<li><p><a class="reference internal" href="#use-custom-projections" id="id47">Use custom projections</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id48">Create timelapse animations</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#data-export" id="id48">Data export</a></p>
+<li><p><a class="reference internal" href="#data-export" id="id49">Data export</a></p>
 <ul>
-<li><p><a class="reference internal" href="#export-ee-image" id="id49">Export ee.Image</a></p></li>
-<li><p><a class="reference internal" href="#export-ee-imagecollection" id="id50">Export ee.ImageCollection</a></p></li>
-<li><p><a class="reference internal" href="#extract-pixels-as-a-numpy-array" id="id51">Extract pixels as a numpy array</a></p></li>
-<li><p><a class="reference internal" href="#export-pixel-values-to-points" id="id52">Export pixel values to points</a></p></li>
-<li><p><a class="reference internal" href="#export-ee-featurecollection" id="id53">Export ee.FeatureCollection</a></p></li>
+<li><p><a class="reference internal" href="#export-ee-image" id="id50">Export ee.Image</a></p></li>
+<li><p><a class="reference internal" href="#export-ee-imagecollection" id="id51">Export ee.ImageCollection</a></p></li>
+<li><p><a class="reference internal" href="#extract-pixels-as-a-numpy-array" id="id52">Extract pixels as a numpy array</a></p></li>
+<li><p><a class="reference internal" href="#export-pixel-values-to-points" id="id53">Export pixel values to points</a></p></li>
+<li><p><a class="reference internal" href="#export-ee-featurecollection" id="id54">Export ee.FeatureCollection</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#web-apps" id="id54">Web apps</a></p>
+<li><p><a class="reference internal" href="#web-apps" id="id55">Web apps</a></p>
 <ul>
-<li><p><a class="reference internal" href="#deploy-web-apps-using-ngrok" id="id55">Deploy web apps using ngrok</a></p></li>
-<li><p><a class="reference internal" href="#deploy-web-apps-using-heroku" id="id56">Deploy web apps using Heroku</a></p></li>
+<li><p><a class="reference internal" href="#deploy-web-apps-using-ngrok" id="id56">Deploy web apps using ngrok</a></p></li>
+<li><p><a class="reference internal" href="#deploy-web-apps-using-heroku" id="id57">Deploy web apps using Heroku</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
+<p>This notebook is a collection of examples of how to use the Google Earth Engine Python API. The examples are based on the <a class="reference external" href="https://developers.google.com/earth-engine/python_install_manual">Google Earth Engine Python API Tutorial</a> and the <a class="reference external" href="https://developers.google.com/earth-engine/python_cookbook">Google Earth Engine Python API Cookbook</a>.</p>
 <p>This notebook was developed for the geemap workshop at the <a class="reference external" href="https://2021.geopython.net">GeoPython 2021 Conference</a>.</p>
 <p>Authors: <a class="reference external" href="https://github.com/giswqs">Qiusheng Wu</a>, <a class="reference external" href="https://github.com/KMarkert">Kel Markert</a></p>
 <p>Link to this notebook: <a class="reference external" href="https://gishub.org/geopython">https://gishub.org/geopython</a></p>
 <p>Recorded video: <a class="reference external" href="https://www.youtube.com/watch?v=wGjpjh9IQ5I">https://www.youtube.com/watch?v=wGjpjh9IQ5I</a></p>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=wGjpjh9IQ5I"><img alt="geemap workship" src="https://img.youtube.com/vi/wGjpjh9IQ5I/0.jpg" /></a></p>
 <section id="introduction">
-<h2><a class="toc-backref" href="#id3">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <section id="description">
-<h3><a class="toc-backref" href="#id4">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id5">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">#</a></h3>
 <p>Google Earth Engine (GEE) is a cloud computing platform with a multi-petabyte catalog of satellite imagery and geospatial datasets. It enables scientists, researchers, and developers to analyze and visualize changes on the Earth’s surface. The geemap Python package provides GEE users with an intuitive interface to manipulate, analyze, and visualize geospatial big data interactively in a Jupyter-based environment. The topics will be covered in this workshop include:</p>
 <ol class="simple">
 <li><p>Introducing geemap and the Earth Engine Python API</p></li>
@@ -1082,7 +1100,7 @@ title="Print to PDF"
 <p>This workshop is intended for scientific programmers, data scientists, geospatial analysts, and concerned citizens of Earth. The attendees are expected to have a basic understanding of Python and the Jupyter ecosystem. Familiarity with Earth science and geospatial datasets is useful but not required.</p>
 </section>
 <section id="useful-links">
-<h3><a class="toc-backref" href="#id5">Useful links</a><a class="headerlink" href="#useful-links" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id6">Useful links</a><a class="headerlink" href="#useful-links" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://2021.geopython.net">GeoPython 2021 Conference website</a></p></li>
 <li><p><a class="reference external" href="https://earthengine.google.com">Google Earth Engine</a></p></li>
@@ -1093,14 +1111,14 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="prerequisite">
-<h3><a class="toc-backref" href="#id6">Prerequisite</a><a class="headerlink" href="#prerequisite" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id7">Prerequisite</a><a class="headerlink" href="#prerequisite" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>A Google Earth Engine account. Sign up <a class="reference external" href="https://earthengine.google.com">here</a> if needed.</p></li>
 <li><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> or <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a></p></li>
 </ul>
 </section>
 <section id="set-up-a-conda-environment">
-<h3><a class="toc-backref" href="#id7">Set up a conda environment</a><a class="headerlink" href="#set-up-a-conda-environment" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id8">Set up a conda environment</a><a class="headerlink" href="#set-up-a-conda-environment" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">geo</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.8</span>
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">geo</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="n">geemap</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
@@ -1111,24 +1129,47 @@ title="Print to PDF"
 </section>
 </section>
 <section id="geemap-basics">
-<h2><a class="toc-backref" href="#id8">geemap basics</a><a class="headerlink" href="#geemap-basics" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id9">geemap basics</a><a class="headerlink" href="#geemap-basics" title="Permalink to this headline">#</a></h2>
 <section id="import-libraries">
-<h3><a class="toc-backref" href="#id9">Import libraries</a><a class="headerlink" href="#import-libraries" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id10">Import libraries</a><a class="headerlink" href="#import-libraries" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">ee</span>
 <span class="kn">import</span> <span class="nn">geemap</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="create-an-interactive-map">
-<h3><a class="toc-backref" href="#id10">Create an interactive map</a><a class="headerlink" href="#create-an-interactive-map" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-an-interactive-map">
+<h3><a class="toc-backref" href="#id11">Create an interactive map</a><a class="headerlink" href="#create-an-interactive-map" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">Map</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">Map</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -1136,11 +1177,11 @@ title="Print to PDF"
 </div>
 </section>
 <section id="customize-the-default-map">
-<h3><a class="toc-backref" href="#id11">Customize the default map</a><a class="headerlink" href="#customize-the-default-map" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id12">Customize the default map</a><a class="headerlink" href="#customize-the-default-map" title="Permalink to this headline">#</a></h3>
 <p>You can specify the center(lat, lon) and zoom for the default map. The lite mode will only show the zoom in/out tool.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">lite_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">lite_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -1148,10 +1189,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="add-basemaps">
-<h3><a class="toc-backref" href="#id12">Add basemaps</a><a class="headerlink" href="#add-basemaps" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id13">Add basemaps</a><a class="headerlink" href="#add-basemaps" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">)</span>
 <span class="n">Map</span>
 </pre></div>
@@ -1160,25 +1201,33 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geemap.basemaps</span> <span class="kn">import</span> <span class="n">basemaps</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geemap.basemaps</span> <span class="kn">import</span> <span class="n">basemaps</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">basemaps</span><span class="o">.</span><span class="n">OpenTopoMap</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">basemaps</span><span class="o">.</span><span class="n">OpenTopoMap</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>For more info, see <a class="reference internal" href="#geemap"><span class="std std-ref">The interactive map displayed in Google Colab.</span></a>.
+For more info, see <a class="reference internal" href="#geemap"><span class="std std-numref">Fig. 1</span></a>.</p>
+<p>See <span id="id1">[<a class="reference internal" href="bibliography.html#id2" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">Holdgraf <em>et al.</em>, 2014</a>, <a class="reference internal" href="bibliography.html#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, Jochem W. Rieger, Nathan Crone, Jack J. Lin, Robert T. Knight, and Frédéric E. Theunissen. Rapid tuning shifts in human auditory cortex enhance speech intelligibility. Nature Communications, 7(May):13654, 2016. URL: http://www.nature.com/doifinder/10.1038/ncomms13654, doi:10.1038/ncomms13654.">Holdgraf <em>et al.</em>, 2016</a>]</span></p>
 </section>
 <section id="change-basemaps-without-coding">
-<h3><a class="toc-backref" href="#id13">Change basemaps without coding</a><a class="headerlink" href="#change-basemaps-without-coding" title="Permalink to this headline">#</a></h3>
-<p><img alt="" src="https://i.imgur.com/PXURCSP.png" /></p>
+<h3><a class="toc-backref" href="#id14">Change basemaps without coding</a><a class="headerlink" href="#change-basemaps-without-coding" title="Permalink to this headline">#</a></h3>
+<figure class="align-default" id="geemap">
+<a class="reference internal image-reference" href="https://i.imgur.com/PXURCSP.png"><img alt="https://i.imgur.com/PXURCSP.png" src="https://i.imgur.com/PXURCSP.png" style="width: 825px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The interactive map displayed in Google Colab.</span><a class="headerlink" href="#geemap" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -1186,11 +1235,11 @@ title="Print to PDF"
 </div>
 </section>
 <section id="add-wms-and-xyz-tile-layers">
-<h3><a class="toc-backref" href="#id14">Add WMS and XYZ tile layers</a><a class="headerlink" href="#add-wms-and-xyz-tile-layers" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id15">Add WMS and XYZ tile layers</a><a class="headerlink" href="#add-wms-and-xyz-tile-layers" title="Permalink to this headline">#</a></h3>
 <p>Examples: <a class="reference external" href="https://viewer.nationalmap.gov/services/">https://viewer.nationalmap.gov/services/</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://mt1.google.com/vt/lyrs=p&amp;x=</span><span class="si">{x}</span><span class="s1">&amp;y=</span><span class="si">{y}</span><span class="s1">&amp;z=</span><span class="si">{z}</span><span class="s1">&#39;</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">add_tile_layer</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Google Terrain&#39;</span><span class="p">,</span> <span class="n">attribution</span><span class="o">=</span><span class="s1">&#39;Google&#39;</span><span class="p">)</span>
@@ -1201,7 +1250,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naip_url</span> <span class="o">=</span> <span class="s1">&#39;https://services.nationalmap.gov/arcgis/services/USGSNAIPImagery/ImageServer/WMSServer?&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">naip_url</span> <span class="o">=</span> <span class="s1">&#39;https://services.nationalmap.gov/arcgis/services/USGSNAIPImagery/ImageServer/WMSServer?&#39;</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">add_wms_layer</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="n">naip_url</span><span class="p">,</span> <span class="n">layers</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;NAIP Imagery&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;image/png&#39;</span><span class="p">,</span> <span class="n">shown</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
@@ -1211,10 +1260,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="use-drawing-tools">
-<h3><a class="toc-backref" href="#id15">Use drawing tools</a><a class="headerlink" href="#use-drawing-tools" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id16">Use drawing tools</a><a class="headerlink" href="#use-drawing-tools" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -1222,25 +1271,25 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Map.user_roi.getInfo()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Map.user_roi.getInfo()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Map.user_rois.getInfo()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Map.user_rois.getInfo()</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="convert-gee-javascript-to-python">
-<h3><a class="toc-backref" href="#id16">Convert GEE JavaScript to Python</a><a class="headerlink" href="#convert-gee-javascript-to-python" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id17">Convert GEE JavaScript to Python</a><a class="headerlink" href="#convert-gee-javascript-to-python" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://developers.google.com/earth-engine/guides/image_visualization">https://developers.google.com/earth-engine/guides/image_visualization</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">js_snippet</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">js_snippet</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">// Load an image.</span>
 <span class="s2">var image = ee.Image(&#39;LANDSAT/LC08/C01/T1_TOA/LC08_044034_20140318&#39;);</span>
 
@@ -1263,7 +1312,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">js_snippet_to_py</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">js_snippet_to_py</span><span class="p">(</span>
     <span class="n">js_snippet</span><span class="p">,</span> <span class="n">add_new_cell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">import_ee</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">import_geemap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_map</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
 </pre></div>
@@ -1274,7 +1323,7 @@ title="Print to PDF"
 <p><img alt="" src="https://i.imgur.com/VnnrJwe.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -1283,12 +1332,12 @@ title="Print to PDF"
 </section>
 </section>
 <section id="earth-engine-datasets">
-<h2><a class="toc-backref" href="#id17">Earth Engine datasets</a><a class="headerlink" href="#earth-engine-datasets" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id18">Earth Engine datasets</a><a class="headerlink" href="#earth-engine-datasets" title="Permalink to this headline">#</a></h2>
 <section id="load-earth-engine-datasets">
-<h3><a class="toc-backref" href="#id18">Load Earth Engine datasets</a><a class="headerlink" href="#load-earth-engine-datasets" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id19">Load Earth Engine datasets</a><a class="headerlink" href="#load-earth-engine-datasets" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="c1"># Add Earth Engine datasets</span>
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
@@ -1320,10 +1369,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="search-the-earth-engine-data-catalog">
-<h3><a class="toc-backref" href="#id19">Search the Earth Engine Data Catalog</a><a class="headerlink" href="#search-the-earth-engine-data-catalog" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id20">Search the Earth Engine Data Catalog</a><a class="headerlink" href="#search-the-earth-engine-data-catalog" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -1331,7 +1380,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;CGIAR/SRTM90_V4&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;CGIAR/SRTM90_V4&#39;</span><span class="p">)</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dem</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">&quot;CGIAR/SRTM90_V4&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1339,7 +1388,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vis_params</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vis_params</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">4000</span><span class="p">,</span>
     <span class="s1">&#39;palette&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;006633&#39;</span><span class="p">,</span> <span class="s1">&#39;E5FFCC&#39;</span><span class="p">,</span> <span class="s1">&#39;662A00&#39;</span><span class="p">,</span> <span class="s1">&#39;D8D8D8&#39;</span><span class="p">,</span> <span class="s1">&#39;F5F5F5&#39;</span><span class="p">],</span>
@@ -1352,17 +1401,17 @@ title="Print to PDF"
 </div>
 </section>
 <section id="use-the-datasets-module">
-<h3><a class="toc-backref" href="#id20">Use the datasets module</a><a class="headerlink" href="#use-the-datasets-module" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id21">Use the datasets module</a><a class="headerlink" href="#use-the-datasets-module" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geemap.datasets</span> <span class="kn">import</span> <span class="n">DATA</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geemap.datasets</span> <span class="kn">import</span> <span class="n">DATA</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">DATA</span><span class="o">.</span><span class="n">USGS_SRTMGL1_003</span><span class="p">)</span>
 
@@ -1380,11 +1429,11 @@ title="Print to PDF"
 </div>
 </section>
 <section id="use-the-inspector-tool">
-<h3><a class="toc-backref" href="#id21">Use the Inspector tool</a><a class="headerlink" href="#use-the-inspector-tool" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id22">Use the Inspector tool</a><a class="headerlink" href="#use-the-inspector-tool" title="Permalink to this headline">#</a></h3>
 <p><img alt="" src="https://i.imgur.com/drnfJ6N.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="c1"># Add Earth Engine datasets</span>
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
@@ -1419,13 +1468,13 @@ title="Print to PDF"
 </section>
 </section>
 <section id="data-visualization">
-<h2><a class="toc-backref" href="#id22">Data visualization</a><a class="headerlink" href="#data-visualization" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id23">Data visualization</a><a class="headerlink" href="#data-visualization" title="Permalink to this headline">#</a></h2>
 <section id="use-the-plotting-tool">
-<h3><a class="toc-backref" href="#id23">Use the Plotting tool</a><a class="headerlink" href="#use-the-plotting-tool" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id24">Use the Plotting tool</a><a class="headerlink" href="#use-the-plotting-tool" title="Permalink to this headline">#</a></h3>
 <p><img alt="" src="https://i.imgur.com/t4jKsNo.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">landsat7</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LE7_TOA_5YEAR/1999_2003&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
     <span class="p">[</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">]</span>
@@ -1452,10 +1501,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="change-layer-opacity">
-<h3><a class="toc-backref" href="#id24">Change layer opacity</a><a class="headerlink" href="#change-layer-opacity" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id25">Change layer opacity</a><a class="headerlink" href="#change-layer-opacity" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
 <span class="n">states</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;TIGER/2018/States&quot;</span><span class="p">)</span>
@@ -1476,10 +1525,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="visualize-raster-data">
-<h3><a class="toc-backref" href="#id25">Visualize raster data</a><a class="headerlink" href="#visualize-raster-data" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id26">Visualize raster data</a><a class="headerlink" href="#visualize-raster-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="c1"># Add Earth Engine dataset</span>
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
@@ -1506,10 +1555,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="visualize-vector-data">
-<h3><a class="toc-backref" href="#id26">Visualize vector data</a><a class="headerlink" href="#visualize-vector-data" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id27">Visualize vector data</a><a class="headerlink" href="#visualize-vector-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">states</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;TIGER/2018/States&quot;</span><span class="p">)</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">&quot;US States&quot;</span><span class="p">)</span>
@@ -1520,7 +1569,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vis_params</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vis_params</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;000000&#39;</span><span class="p">,</span>
     <span class="s1">&#39;colorOpacity&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="s1">&#39;pointSize&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
@@ -1541,10 +1590,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="add-a-legend">
-<h3><a class="toc-backref" href="#id27">Add a legend</a><a class="headerlink" href="#add-a-legend" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id28">Add a legend</a><a class="headerlink" href="#add-a-legend" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">legends</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">builtin_legends</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">legends</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">builtin_legends</span>
 <span class="k">for</span> <span class="n">legend</span> <span class="ow">in</span> <span class="n">legends</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">legend</span><span class="p">)</span>
 </pre></div>
@@ -1553,7 +1602,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">)</span>
 <span class="n">landcover</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/NLCD/NLCD2016&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;NLCD Land Cover&#39;</span><span class="p">)</span>
@@ -1565,7 +1614,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">legend_dict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;11 Open Water&#39;</span><span class="p">:</span> <span class="s1">&#39;466b9f&#39;</span><span class="p">,</span>
@@ -1601,10 +1650,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="add-a-colorbar">
-<h3><a class="toc-backref" href="#id28">Add a colorbar</a><a class="headerlink" href="#add-a-colorbar" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id29">Add a colorbar</a><a class="headerlink" href="#add-a-colorbar" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
 <span class="n">vis_params</span> <span class="o">=</span> <span class="p">{</span>
@@ -1627,7 +1676,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span>
     <span class="n">vis_params</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Elevation (m)&quot;</span><span class="p">,</span> <span class="n">layer_name</span><span class="o">=</span><span class="s2">&quot;SRTM DEM&quot;</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span>
 <span class="p">)</span>
 </pre></div>
@@ -1636,7 +1685,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span>
     <span class="n">vis_params</span><span class="p">,</span>
     <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Elevation (m)&quot;</span><span class="p">,</span>
     <span class="n">layer_name</span><span class="o">=</span><span class="s2">&quot;SRTM DEM&quot;</span><span class="p">,</span>
@@ -1649,7 +1698,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span>
     <span class="n">vis_params</span><span class="p">,</span>
     <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Elevation (m)&quot;</span><span class="p">,</span>
     <span class="n">layer_name</span><span class="o">=</span><span class="s2">&quot;SRTM DEM&quot;</span><span class="p">,</span>
@@ -1663,10 +1712,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="create-a-split-panel-map">
-<h3><a class="toc-backref" href="#id29">Create a split-panel map</a><a class="headerlink" href="#create-a-split-panel-map" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id30">Create a split-panel map</a><a class="headerlink" href="#create-a-split-panel-map" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">split_map</span><span class="p">(</span><span class="n">left_layer</span><span class="o">=</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="s1">&#39;TERRAIN&#39;</span><span class="p">)</span>
 <span class="n">Map</span>
 </pre></div>
@@ -1675,7 +1724,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">split_map</span><span class="p">(</span>
     <span class="n">left_layer</span><span class="o">=</span><span class="s1">&#39;NLCD 2016 CONUS Land Cover&#39;</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="s1">&#39;NLCD 2001 CONUS Land Cover&#39;</span>
 <span class="p">)</span>
@@ -1686,7 +1735,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nlcd_2001</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/NLCD/NLCD2001&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nlcd_2001</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/NLCD/NLCD2001&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span>
 <span class="n">nlcd_2016</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/NLCD/NLCD2016&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span>
 
 <span class="n">left_layer</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">ee_tile_layer</span><span class="p">(</span><span class="n">nlcd_2001</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;NLCD 2001&#39;</span><span class="p">)</span>
@@ -1701,10 +1750,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="create-linked-maps">
-<h3><a class="toc-backref" href="#id30">Create linked maps</a><a class="headerlink" href="#create-linked-maps" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id31">Create linked maps</a><a class="headerlink" href="#create-linked-maps" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;COPERNICUS/S2&#39;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="s1">&#39;2018-09-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2018-09-30&#39;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">img</span><span class="p">:</span> <span class="n">img</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="mi">10000</span><span class="p">))</span>
@@ -1742,20 +1791,20 @@ title="Print to PDF"
 </div>
 </section>
 <section id="create-timelapse-animations">
-<h3><a class="toc-backref" href="#id31">Create timelapse animations</a><a class="headerlink" href="#create-timelapse-animations" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id32">Create timelapse animations</a><a class="headerlink" href="#create-timelapse-animations" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s1">&#39;https://youtu.be/mA21Us_3m28&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s1">&#39;https://youtu.be/mA21Us_3m28&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="create-time-series-composites">
-<h3><a class="toc-backref" href="#id32">Create time-series composites</a><a class="headerlink" href="#create-time-series-composites" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id33">Create time-series composites</a><a class="headerlink" href="#create-time-series-composites" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s1">&#39;https://youtu.be/kEltQkNia6o&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s1">&#39;https://youtu.be/kEltQkNia6o&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1763,12 +1812,12 @@ title="Print to PDF"
 </section>
 </section>
 <section id="data-analysis">
-<h2><a class="toc-backref" href="#id33">Data analysis</a><a class="headerlink" href="#data-analysis" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id34">Data analysis</a><a class="headerlink" href="#data-analysis" title="Permalink to this headline">#</a></h2>
 <section id="descriptive-statistics">
-<h3><a class="toc-backref" href="#id34">Descriptive statistics</a><a class="headerlink" href="#descriptive-statistics" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id35">Descriptive statistics</a><a class="headerlink" href="#descriptive-statistics" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">centroid</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.4439</span><span class="p">,</span> <span class="mf">37.7538</span><span class="p">])</span>
 
@@ -1785,21 +1834,21 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="o">.</span><span class="n">propertyNames</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="o">.</span><span class="n">propertyNames</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;CLOUD_COVER&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">props</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">image_props</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">props</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">image_props</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 <span class="n">props</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1807,7 +1856,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stats</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">image_stats</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stats</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">image_stats</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 <span class="n">stats</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1815,10 +1864,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="zonal-statistics">
-<h3><a class="toc-backref" href="#id35">Zonal statistics</a><a class="headerlink" href="#zonal-statistics" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id36">Zonal statistics</a><a class="headerlink" href="#zonal-statistics" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="c1"># Add Earth Engine dataset</span>
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
@@ -1848,7 +1897,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
 <span class="n">out_dem_stats</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;dem_stats.csv&#39;</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
@@ -1863,7 +1912,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_landsat_stats</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;landsat_stats.csv&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_landsat_stats</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;landsat_stats.csv&#39;</span><span class="p">)</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">zonal_statistics</span><span class="p">(</span>
     <span class="n">landsat</span><span class="p">,</span> <span class="n">states</span><span class="p">,</span> <span class="n">out_landsat_stats</span><span class="p">,</span> <span class="n">statistics_type</span><span class="o">=</span><span class="s1">&#39;SUM&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1000</span>
 <span class="p">)</span>
@@ -1873,10 +1922,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="zonal-statistics-by-group">
-<h3><a class="toc-backref" href="#id36">Zonal statistics by group</a><a class="headerlink" href="#zonal-statistics-by-group" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id37">Zonal statistics by group</a><a class="headerlink" href="#zonal-statistics-by-group" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/NLCD/NLCD2016&#39;</span><span class="p">)</span>
 <span class="n">landcover</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">))</span>
@@ -1892,7 +1941,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
 <span class="n">nlcd_stats</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;nlcd_stats.csv&#39;</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
@@ -1914,7 +1963,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="unsupervised-classification">
-<h3><a class="toc-backref" href="#id37">Unsupervised classification</a><a class="headerlink" href="#unsupervised-classification" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id38">Unsupervised classification</a><a class="headerlink" href="#unsupervised-classification" title="Permalink to this headline">#</a></h3>
 <p>Source: <a class="reference external" href="https://developers.google.com/earth-engine/guides/clustering">https://developers.google.com/earth-engine/guides/clustering</a></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">ee.Clusterer</span></code> package handles unsupervised classification (or clustering) in Earth Engine. These algorithms are currently based on the algorithms with the same name in <a class="reference external" href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a>. More details about each Clusterer are available in the reference docs in the Code Editor.</p>
 <p>Clusterers are used in the same manner as classifiers in Earth Engine. The general workflow for clustering is:</p>
@@ -1931,7 +1980,7 @@ title="Print to PDF"
 <p><strong>Add data to the map</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">point</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">87.7719</span><span class="p">,</span> <span class="mf">41.8799</span><span class="p">])</span>
 
@@ -1964,7 +2013,7 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">training</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
     <span class="o">**</span><span class="p">{</span>
         <span class="c1">#     &#39;region&#39;: region,</span>
         <span class="s1">&#39;scale&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
@@ -1982,7 +2031,7 @@ title="Print to PDF"
 <p><strong>Train the clusterer</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Instantiate the clusterer and train it.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Instantiate the clusterer and train it.</span>
 <span class="n">n_clusters</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">clusterer</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Clusterer</span><span class="o">.</span><span class="n">wekaKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="p">)</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">training</span><span class="p">)</span>
 </pre></div>
@@ -1992,7 +2041,7 @@ title="Print to PDF"
 <p><strong>Classify the image</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cluster the input using the trained clusterer.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cluster the input using the trained clusterer.</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">cluster</span><span class="p">(</span><span class="n">clusterer</span><span class="p">)</span>
 
 <span class="c1"># # Display the clusters with random colors.</span>
@@ -2005,7 +2054,7 @@ title="Print to PDF"
 <p><strong>Label the clusters</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">legend_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Three&#39;</span><span class="p">,</span> <span class="s1">&#39;Four&#39;</span><span class="p">,</span> <span class="s1">&#39;ect&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">legend_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Three&#39;</span><span class="p">,</span> <span class="s1">&#39;Four&#39;</span><span class="p">,</span> <span class="s1">&#39;ect&#39;</span><span class="p">]</span>
 <span class="n">legend_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#8DD3C7&#39;</span><span class="p">,</span> <span class="s1">&#39;#FFFFB3&#39;</span><span class="p">,</span> <span class="s1">&#39;#BEBADA&#39;</span><span class="p">,</span> <span class="s1">&#39;#FB8072&#39;</span><span class="p">,</span> <span class="s1">&#39;#80B1D3&#39;</span><span class="p">]</span>
 
 <span class="c1"># Reclassify the map</span>
@@ -2024,7 +2073,7 @@ title="Print to PDF"
 <p><strong>Visualize the result</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Change layer opacity:&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Change layer opacity:&#39;</span><span class="p">)</span>
 <span class="n">cluster_layer</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">cluster_layer</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
 </pre></div>
@@ -2033,7 +2082,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span>
 </pre></div>
 </div>
 </div>
@@ -2041,7 +2090,7 @@ title="Print to PDF"
 <p><strong>Export the result</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
 <span class="n">out_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;cluster.tif&#39;</span><span class="p">)</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">out_file</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 </pre></div>
@@ -2050,14 +2099,14 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_to_drive(result, description=&#39;clusters&#39;, folder=&#39;export&#39;, scale=90)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_to_drive(result, description=&#39;clusters&#39;, folder=&#39;export&#39;, scale=90)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="supervised-classification">
-<h3><a class="toc-backref" href="#id38">Supervised classification</a><a class="headerlink" href="#supervised-classification" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id39">Supervised classification</a><a class="headerlink" href="#supervised-classification" title="Permalink to this headline">#</a></h3>
 <p>Source: <a class="reference external" href="https://developers.google.com/earth-engine/guides/classification">https://developers.google.com/earth-engine/guides/classification</a></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Classifier</span></code> package handles supervised classification by traditional ML algorithms running in Earth Engine. These classifiers include CART, RandomForest, NaiveBayes and SVM. The general workflow for classification is:</p>
 <ol class="simple">
@@ -2072,7 +2121,7 @@ title="Print to PDF"
 <p><strong>Add data to the map</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">point</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">122.4439</span><span class="p">,</span> <span class="mf">37.7538</span><span class="p">])</span>
 
@@ -2105,7 +2154,7 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># region = Map.user_roi</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># region = Map.user_roi</span>
 <span class="c1"># region = ee.Geometry.Rectangle([-122.6003, 37.4831, -121.8036, 37.8288])</span>
 <span class="c1"># region = ee.Geometry.Point([-122.4439, 37.7538]).buffer(10000)</span>
 </pre></div>
@@ -2116,7 +2165,7 @@ title="Print to PDF"
 <p><img alt="" src="https://i.imgur.com/7QoRXxu.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nlcd</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/NLCD/NLCD2016&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">geometry</span><span class="p">())</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nlcd</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/NLCD/NLCD2016&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;landcover&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">geometry</span><span class="p">())</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">nlcd</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;NLCD&#39;</span><span class="p">)</span>
 <span class="n">Map</span>
 </pre></div>
@@ -2125,7 +2174,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make the training dataset.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make the training dataset.</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">nlcd</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
     <span class="o">**</span><span class="p">{</span>
         <span class="s1">&#39;region&#39;</span><span class="p">:</span> <span class="n">image</span><span class="o">.</span><span class="n">geometry</span><span class="p">(),</span>
@@ -2144,7 +2193,7 @@ title="Print to PDF"
 <p><strong>Train the classifier</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use these bands for prediction.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use these bands for prediction.</span>
 <span class="n">bands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">,</span> <span class="s1">&#39;B7&#39;</span><span class="p">]</span>
 
 
@@ -2165,7 +2214,7 @@ title="Print to PDF"
 <p><strong>Classify the image</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classify the image with the same bands used for training.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classify the image with the same bands used for training.</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">trained</span><span class="p">)</span>
 
 <span class="c1"># # Display the clusters with random colors.</span>
@@ -2179,7 +2228,7 @@ title="Print to PDF"
 <p>To render a categorical map, we can set two image properties: <code class="docutils literal notranslate"><span class="pre">landcover_class_values</span></code> and <code class="docutils literal notranslate"><span class="pre">landcover_class_palette</span></code>. We can use the same style as the NLCD so that it is easy to compare the two maps.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">class_values</span> <span class="o">=</span> <span class="n">nlcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;landcover_class_values&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">class_values</span> <span class="o">=</span> <span class="n">nlcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;landcover_class_values&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 <span class="n">class_palette</span> <span class="o">=</span> <span class="n">nlcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;landcover_class_palette&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2187,7 +2236,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">landcover</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;classification_class_values&#39;</span><span class="p">,</span> <span class="n">class_values</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">landcover</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;classification_class_values&#39;</span><span class="p">,</span> <span class="n">class_values</span><span class="p">)</span>
 <span class="n">landcover</span> <span class="o">=</span> <span class="n">landcover</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;classification_class_palette&#39;</span><span class="p">,</span> <span class="n">class_palette</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2195,7 +2244,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;Land cover&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;Land cover&#39;</span><span class="p">)</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">add_legend</span><span class="p">(</span><span class="n">builtin_legend</span><span class="o">=</span><span class="s1">&#39;NLCD&#39;</span><span class="p">)</span>
 <span class="n">Map</span>
 </pre></div>
@@ -2205,7 +2254,7 @@ title="Print to PDF"
 <p><strong>Visualize the result</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Change layer opacity:&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Change layer opacity:&#39;</span><span class="p">)</span>
 <span class="n">cluster_layer</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">cluster_layer</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
 </pre></div>
@@ -2215,7 +2264,7 @@ title="Print to PDF"
 <p><strong>Export the result</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
 <span class="n">out_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;landcover.tif&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2223,32 +2272,32 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">out_file</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">out_file</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_to_drive(landcover, description=&#39;landcover&#39;, folder=&#39;export&#39;, scale=900)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_to_drive(landcover, description=&#39;landcover&#39;, folder=&#39;export&#39;, scale=900)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="training-sample-creation">
-<h3><a class="toc-backref" href="#id39">Training sample creation</a><a class="headerlink" href="#training-sample-creation" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id40">Training sample creation</a><a class="headerlink" href="#training-sample-creation" title="Permalink to this headline">#</a></h3>
 <p><img alt="" src="https://i.imgur.com/QQDjcPt.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s1">&#39;https://youtu.be/VWh5PxXPZw0&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s1">&#39;https://youtu.be/VWh5PxXPZw0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -2256,24 +2305,24 @@ title="Print to PDF"
 </div>
 </section>
 <section id="whiteboxtools">
-<h3><a class="toc-backref" href="#id40">WhiteboxTools</a><a class="headerlink" href="#whiteboxtools" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id41">WhiteboxTools</a><a class="headerlink" href="#whiteboxtools" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">whiteboxgui</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">whiteboxgui</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">whiteboxgui</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">whiteboxgui</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">whiteboxgui</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">tree</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">whiteboxgui</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">tree</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2281,7 +2330,7 @@ title="Print to PDF"
 <p><img alt="" src="https://i.imgur.com/aNRfUIf.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 <span class="n">Map</span>
 </pre></div>
 </div>
@@ -2290,12 +2339,12 @@ title="Print to PDF"
 </section>
 </section>
 <section id="map-making">
-<h2><a class="toc-backref" href="#id41">Map making</a><a class="headerlink" href="#map-making" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id42">Map making</a><a class="headerlink" href="#map-making" title="Permalink to this headline">#</a></h2>
 <section id="plot-a-single-band-image">
-<h3><a class="toc-backref" href="#id42">Plot a single band image</a><a class="headerlink" href="#plot-a-single-band-image" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id43">Plot a single band image</a><a class="headerlink" href="#plot-a-single-band-image" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">geemap</span> <span class="kn">import</span> <span class="n">cartoee</span>
 </pre></div>
 </div>
@@ -2303,14 +2352,14 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_initialize</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_initialize</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">srtm</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;CGIAR/SRTM90_V4&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srtm</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;CGIAR/SRTM90_V4&quot;</span><span class="p">)</span>
 <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">85</span><span class="p">]</span>  <span class="c1"># define bounding box to request data</span>
 <span class="n">vis</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">}</span>  <span class="c1"># define visualization parameters for image</span>
 </pre></div>
@@ -2319,7 +2368,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&quot;gist_earth&quot;</span>  <span class="c1"># colormap we want to use</span>
 <span class="c1"># cmap = &quot;terrain&quot;</span>
@@ -2347,10 +2396,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="plot-an-rgb-image">
-<h3><a class="toc-backref" href="#id43">Plot an RGB image</a><a class="headerlink" href="#plot-an-rgb-image" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id44">Plot an RGB image</a><a class="headerlink" href="#plot-an-rgb-image" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get a landsat image to visualize</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get a landsat image to visualize</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C01/T1_SR/LC08_044034_20140318&#39;</span><span class="p">)</span>
 
 <span class="c1"># define the visualization parameters to view</span>
@@ -2361,7 +2410,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># here is the bounding box of the map extent we want to use</span>
 <span class="c1"># formatted a [W,S,E,N]</span>
@@ -2395,17 +2444,17 @@ title="Print to PDF"
 </div>
 </section>
 <section id="add-map-elements">
-<h3><a class="toc-backref" href="#id44">Add map elements</a><a class="headerlink" href="#add-map-elements" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id45">Add map elements</a><a class="headerlink" href="#add-map-elements" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get a landsat image to visualize</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get a landsat image to visualize</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C01/T1_SR/LC08_044034_20140318&#39;</span><span class="p">)</span>
 
 <span class="c1"># define the visualization parameters to view</span>
@@ -2416,7 +2465,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># here is the bounding box of the map extent we want to use</span>
 <span class="c1"># formatted a [W,S,E,N]</span>
@@ -2467,10 +2516,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="plot-multiple-layers">
-<h3><a class="toc-backref" href="#id45">Plot multiple layers</a><a class="headerlink" href="#plot-multiple-layers" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id46">Plot multiple layers</a><a class="headerlink" href="#plot-multiple-layers" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">image</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;MODIS/MCD43A4_006_NDVI&#39;</span><span class="p">)</span>
@@ -2521,7 +2570,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># specify region to focus on</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># specify region to focus on</span>
 <span class="n">bbox</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">88</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -2529,7 +2578,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># plot the result with cartoee using a PlateCarre projection (default)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">cartoee</span><span class="o">.</span><span class="n">get_map</span><span class="p">(</span><span class="n">blend</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
@@ -2545,14 +2594,14 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">EqualEarth</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">180</span><span class="p">)</span>
 
@@ -2570,17 +2619,17 @@ title="Print to PDF"
 </div>
 </section>
 <section id="use-custom-projections">
-<h3><a class="toc-backref" href="#id46">Use custom projections</a><a class="headerlink" href="#use-custom-projections" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id47">Use custom projections</a><a class="headerlink" href="#use-custom-projections" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get an earth engine image of ocean data for Jan-Mar 2018</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get an earth engine image of ocean data for Jan-Mar 2018</span>
 <span class="n">ocean</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/OCEANDATA/MODIS-Terra/L3SMI&#39;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Filter</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="s1">&#39;2018-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2018-03-01&#39;</span><span class="p">))</span>
@@ -2593,7 +2642,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set parameters for plotting</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># set parameters for plotting</span>
 <span class="c1"># will plot the Sea Surface Temp with specific range and colormap</span>
 <span class="n">visualization</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bands&#39;</span><span class="p">:</span> <span class="s2">&quot;SST&quot;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
 <span class="c1"># specify region to focus on</span>
@@ -2604,7 +2653,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># plot the result with cartoee using a PlateCarre projection (default)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">cartoee</span><span class="o">.</span><span class="n">get_map</span><span class="p">(</span><span class="n">ocean</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="n">vis_params</span><span class="o">=</span><span class="n">visualization</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">bbox</span><span class="p">)</span>
@@ -2620,7 +2669,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># create a new Mollweide projection centered on the Pacific</span>
 <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Mollweide</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">180</span><span class="p">)</span>
@@ -2643,7 +2692,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># create a new Robinson projection centered on the Pacific</span>
 <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">180</span><span class="p">)</span>
@@ -2666,7 +2715,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># create a new equal Earth projection focused on the Pacific</span>
 <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">EqualEarth</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">180</span><span class="p">)</span>
@@ -2689,7 +2738,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># create a new orographic projection focused on the Pacific</span>
 <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Orthographic</span><span class="p">(</span><span class="o">-</span><span class="mi">130</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
@@ -2711,11 +2760,11 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="id1">
-<h3><a class="toc-backref" href="#id47">Create timelapse animations</a><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="id2">
+<h3><a class="toc-backref" href="#id48">Create timelapse animations</a><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">lon</span> <span class="o">=</span> <span class="o">-</span><span class="mf">115.1585</span>
 <span class="n">lat</span> <span class="o">=</span> <span class="mf">36.1500</span>
@@ -2754,7 +2803,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="mf">0.4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="mf">0.4</span>
 <span class="n">h</span> <span class="o">=</span> <span class="mf">0.3</span>
 
 <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="n">lon</span> <span class="o">-</span> <span class="n">w</span><span class="p">,</span> <span class="n">lat</span> <span class="o">-</span> <span class="n">h</span><span class="p">,</span> <span class="n">lon</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">lat</span> <span class="o">+</span> <span class="n">h</span><span class="p">]</span>
@@ -2804,7 +2853,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cartoee</span><span class="o">.</span><span class="n">get_image_collection_gif</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cartoee</span><span class="o">.</span><span class="n">get_image_collection_gif</span><span class="p">(</span>
     <span class="n">ee_ic</span><span class="o">=</span><span class="n">collection</span><span class="p">,</span>
     <span class="n">out_dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/Downloads/timelapse&quot;</span><span class="p">),</span>
     <span class="n">out_gif</span><span class="o">=</span><span class="s2">&quot;animation.gif&quot;</span><span class="p">,</span>
@@ -2829,12 +2878,12 @@ title="Print to PDF"
 </section>
 </section>
 <section id="data-export">
-<h2><a class="toc-backref" href="#id48">Data export</a><a class="headerlink" href="#data-export" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id49">Data export</a><a class="headerlink" href="#data-export" title="Permalink to this headline">#</a></h2>
 <section id="export-ee-image">
-<h3><a class="toc-backref" href="#id49">Export ee.Image</a><a class="headerlink" href="#export-ee-image" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id50">Export ee.Image</a><a class="headerlink" href="#export-ee-image" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LE7_TOA_5YEAR/1999_2003&#39;</span><span class="p">)</span>
 
@@ -2848,7 +2897,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Draw any shapes on the map using the Drawing tools before executing this code block</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Draw any shapes on the map using the Drawing tools before executing this code block</span>
 <span class="n">roi</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">user_roi</span>
 
 <span class="k">if</span> <span class="n">roi</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -2869,7 +2918,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set output directory</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set output directory</span>
 <span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
@@ -2883,7 +2932,7 @@ title="Print to PDF"
 <p>Exporting all bands as one single image</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">roi</span><span class="p">)</span><span class="o">.</span><span class="n">unmask</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">roi</span><span class="p">)</span><span class="o">.</span><span class="n">unmask</span><span class="p">()</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image</span><span class="p">(</span>
     <span class="n">image</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">roi</span><span class="p">,</span> <span class="n">file_per_band</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span>
@@ -2894,7 +2943,7 @@ title="Print to PDF"
 <p>Exporting each band as one image</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image</span><span class="p">(</span>
     <span class="n">image</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">roi</span><span class="p">,</span> <span class="n">file_per_band</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
 </pre></div>
@@ -2904,17 +2953,17 @@ title="Print to PDF"
 <p>Export an image to Google Drive¶</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_to_drive(image, description=&#39;landsat&#39;, folder=&#39;export&#39;, region=roi, scale=30)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_to_drive(image, description=&#39;landsat&#39;, folder=&#39;export&#39;, region=roi, scale=30)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="export-ee-imagecollection">
-<h3><a class="toc-backref" href="#id50">Export ee.ImageCollection</a><a class="headerlink" href="#export-ee-imagecollection" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id51">Export ee.ImageCollection</a><a class="headerlink" href="#export-ee-imagecollection" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loc</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mf">99.2222</span><span class="p">,</span> <span class="mf">46.7816</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">loc</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mf">99.2222</span><span class="p">,</span> <span class="mf">46.7816</span><span class="p">)</span>
 <span class="n">collection</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;USDA/NAIP/DOQQ&#39;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
@@ -2927,31 +2976,31 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span><span class="o">.</span><span class="n">aggregate_array</span><span class="p">(</span><span class="s1">&#39;system:index&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span><span class="o">.</span><span class="n">aggregate_array</span><span class="p">(</span><span class="s1">&#39;system:index&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image_collection</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="n">out_dir</span><span class="o">=</span><span class="n">out_dir</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image_collection</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="n">out_dir</span><span class="o">=</span><span class="n">out_dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_collection_to_drive(collection, folder=&#39;export&#39;, scale=10)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_image_collection_to_drive(collection, folder=&#39;export&#39;, scale=10)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="extract-pixels-as-a-numpy-array">
-<h3><a class="toc-backref" href="#id51">Extract pixels as a numpy array</a><a class="headerlink" href="#extract-pixels-as-a-numpy-array" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id52">Extract pixels as a numpy array</a><a class="headerlink" href="#extract-pixels-as-a-numpy-array" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">img</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LC08/C01/T1_SR/LC08_038029_20180810&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B5&#39;</span><span class="p">,</span> <span class="s1">&#39;B6&#39;</span><span class="p">])</span>
 
@@ -2967,7 +3016,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rgb_img_test</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span> <span class="o">*</span> <span class="p">((</span><span class="n">rgb_img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3500</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rgb_img_test</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span> <span class="o">*</span> <span class="p">((</span><span class="n">rgb_img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3500</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rgb_img_test</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -2976,10 +3025,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="export-pixel-values-to-points">
-<h3><a class="toc-backref" href="#id52">Export pixel values to points</a><a class="headerlink" href="#export-pixel-values-to-points" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id53">Export pixel values to points</a><a class="headerlink" href="#export-pixel-values-to-points" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="c1"># Add Earth Engine dataset</span>
 <span class="n">dem</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;USGS/SRTMGL1_003&#39;</span><span class="p">)</span>
@@ -3005,7 +3054,7 @@ title="Print to PDF"
 <p><strong>Download sample data</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">work_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">work_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
 <span class="n">in_shp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="s1">&#39;us_cities.shp&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">in_shp</span><span class="p">):</span>
     <span class="n">data_url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/giswqs/data/raw/main/us/us_cities.zip&#39;</span>
@@ -3016,7 +3065,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">in_fc</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">shp_to_ee</span><span class="p">(</span><span class="n">in_shp</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">in_fc</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">shp_to_ee</span><span class="p">(</span><span class="n">in_shp</span><span class="p">)</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">in_fc</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;Cities&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3025,7 +3074,7 @@ title="Print to PDF"
 <p><strong>Export pixel values as a shapefile</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_shp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="s1">&#39;dem.shp&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_shp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="s1">&#39;dem.shp&#39;</span><span class="p">)</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">extract_values_to_points</span><span class="p">(</span><span class="n">in_fc</span><span class="p">,</span> <span class="n">dem</span><span class="p">,</span> <span class="n">out_shp</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3034,7 +3083,7 @@ title="Print to PDF"
 <p><strong>Export pixel values as a csv</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_csv</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="s1">&#39;landsat.csv&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_csv</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="s1">&#39;landsat.csv&#39;</span><span class="p">)</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">extract_values_to_points</span><span class="p">(</span><span class="n">in_fc</span><span class="p">,</span> <span class="n">landsat7</span><span class="p">,</span> <span class="n">out_csv</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3042,10 +3091,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="export-ee-featurecollection">
-<h3><a class="toc-backref" href="#id53">Export ee.FeatureCollection</a><a class="headerlink" href="#export-ee-featurecollection" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id54">Export ee.FeatureCollection</a><a class="headerlink" href="#export-ee-featurecollection" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 
 <span class="n">fc</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="s1">&#39;users/giswqs/public/countries&#39;</span><span class="p">)</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">&quot;Countries&quot;</span><span class="p">)</span>
@@ -3056,7 +3105,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Downloads&#39;</span><span class="p">)</span>
 <span class="n">out_shp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;countries.shp&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3064,14 +3113,14 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_to_shp</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">out_shp</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">ee_to_shp</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">out_shp</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_csv</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;countries.csv&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_csv</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;countries.csv&#39;</span><span class="p">)</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_vector</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">out_csv</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3079,7 +3128,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_kml</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;countries.kml&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">out_kml</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="s1">&#39;countries.kml&#39;</span><span class="p">)</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_vector</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">out_kml</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3087,7 +3136,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_vector_to_drive(fc, description=&quot;countries&quot;, folder=&quot;export&quot;, file_format=&quot;shp&quot;)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># geemap.ee_export_vector_to_drive(fc, description=&quot;countries&quot;, folder=&quot;export&quot;, file_format=&quot;shp&quot;)</span>
 </pre></div>
 </div>
 </div>
@@ -3095,9 +3144,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="web-apps">
-<h2><a class="toc-backref" href="#id54">Web apps</a><a class="headerlink" href="#web-apps" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id55">Web apps</a><a class="headerlink" href="#web-apps" title="Permalink to this headline">#</a></h2>
 <section id="deploy-web-apps-using-ngrok">
-<h3><a class="toc-backref" href="#id55">Deploy web apps using ngrok</a><a class="headerlink" href="#deploy-web-apps-using-ngrok" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id56">Deploy web apps using ngrok</a><a class="headerlink" href="#deploy-web-apps-using-ngrok" title="Permalink to this headline">#</a></h3>
 <p><strong>Steps to deploy an Earth Engine App:</strong></p>
 <ol class="simple">
 <li><p>Install ngrok by following the <a class="reference external" href="https://ngrok.com/download">instruction</a></p></li>
@@ -3115,14 +3164,14 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s2">&quot;https://youtu.be/eRDZBVJcNCk&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s2">&quot;https://youtu.be/eRDZBVJcNCk&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="deploy-web-apps-using-heroku">
-<h3><a class="toc-backref" href="#id56">Deploy web apps using Heroku</a><a class="headerlink" href="#deploy-web-apps-using-heroku" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id57">Deploy web apps using Heroku</a><a class="headerlink" href="#deploy-web-apps-using-heroku" title="Permalink to this headline">#</a></h3>
 <p><strong>Steps to deploy an Earth Engine App:</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://signup.heroku.com/">Sign up</a> for a free heroku account.</p></li>
@@ -3150,7 +3199,7 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s2">&quot;https://youtu.be/nsIjfD83ggA&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geemap</span><span class="o">.</span><span class="n">show_youtube</span><span class="p">(</span><span class="s2">&quot;https://youtu.be/nsIjfD83ggA&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

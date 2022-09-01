@@ -284,7 +284,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/giswqs/jb-demo/edit/master/book/notebooks.ipynb"
+        <a href="https://github.com/giswqs/jb-demo/edit/master/book/notebooks.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,6 +316,23 @@ title="Edit this page"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/book/notebooks.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
 title="Download source file"
 >
   
@@ -323,7 +340,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -463,20 +480,14 @@ or see <a class="reference external" href="https://myst-parser.readthedocs.io/en
 <h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">#</a></h2>
 <p>Jupyter Book will also embed your code blocks and output in your book.
 For example, here’s some sample Matplotlib code:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
 
 <span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
@@ -498,8 +509,6 @@ For example, here’s some sample Matplotlib code:</p>
 <span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
 with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
