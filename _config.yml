@@ -17,7 +17,7 @@ only_build_toc_files: true
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: "auto" # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  execute_notebooks: "off" # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
   cache: "" # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
   exclude_patterns: [] # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
   timeout: 100 # The maximum time (in seconds) each notebook cell is allowed to run.
@@ -66,12 +66,10 @@ sphinx:
         }
     bibtex_reference_style: author_year
 
-
 # Define the name of the latex output file for PDF builds
 # latex:
 #   latex_documents:
 #     targetname: book.tex
-
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
